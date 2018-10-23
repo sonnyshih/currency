@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (ndtEidtText.getText().toString().equals("")) {
                     new AlertDialog.Builder(MainActivity.this)
-                            .setTitle("Problem")
-                            .setMessage("Please enter your NTD amount")
-                            .setPositiveButton("OK", null)
+                            .setTitle(R.string.problem)
+                            .setMessage(R.string.please_enter_ntd)
+                            .setPositiveButton(R.string.ok, null)
                             .show();
 
                 } else {
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
                         double result = ndtNumber/30.9f;
 
                         new AlertDialog.Builder(MainActivity.this)
-                                .setTitle("Result")
-                                .setMessage("USD is " + result)
-                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                .setTitle(R.string.result)
+                                .setMessage(getString(R.string.usd_is) + result)
+                                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         ndtEidtText.setText("");
